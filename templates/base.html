@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}{% if subtitle %} | {{ subtitle }}{% endif %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+
+        <!-- INCLUDE FONT AWESOME -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='all.min.css') }}">
+    </head>
+    <body>
+        <!-- BEGIN CONTAINER -->
+        <div class="container">
+            <!-- BEGIN HEADER -->
+            <div id="header">
+                <div class="inner-header">
+                    <h1 class="title">{{ title }}</h1>
+                </div>
+            </div>
+            <!-- END HEADER -->
+
+            <!-- BEGIN NAV -->
+            <div id="nav">
+                <div class="inner-nav">
+                    <div class="left">
+                        {% if authed %}
+                        <a class="{% if active == 'home' %}active{% endif %}" href="/">Home</a>
+                        <a class="{% if active == 'x3_m_competition' %}active{% endif %}" href="{{ url_for('x3_m_competition') }}">X3MC</a>
+                        <a class="{% if active == 'c63_s_amg' %}active{% endif %}" href="{{ url_for('c63_s_amg') }}">C63 S AMG</a>
+                        <a class="{% if active == 'corvette' %}active{% endif %}" href="{{ url_for('corvette') }}">Corvette</a>
+                        <a class="{% if active == 'compare' %}active{% endif %}" href="{{ url_for('compare') }}">Compare</a>
+                        <a class="{% if active == 'update_password' %}active{% endif %}" href="{{ url_for('update_password') }}">Update Password</a>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                        {% else %}
+                        <a class="{% if active == 'login' %}active{% endif %}" href="{{ url_for('login') }}">Login</a>
+                        <a class="{% if active == 'register' %}active{% endif %}" href="{{ url_for('register') }}">Register</a>
+                        {% endif %}
+                    </div>
+
+                    <div class="right">
+                        {{ date }}
+                    </div>
+                </div>
+            </div>
+            <!-- END NAV -->
+
+            <!-- BEGIN CONTENT -->
+            <div id="content">
+                <div class="inner-content">
+
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        {% for message in messages %}
+                          <div class="info">{{ message }}</div>
+                        {% endfor %}
+                      {% endif %}
+                    {% endwith %}
+
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+            <!-- END CONTENT -->
+
+            <!-- BEGIN FOOTER -->
+            <div id="footer">
+                <span>&copy; 2020 Brandon Smith</span>
+            </div>
+            <!-- END FOOTER -->
+        </div>
+        <!-- END CONTAINER -->
+    </body>
+</html>

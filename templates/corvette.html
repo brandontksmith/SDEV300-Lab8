@@ -1,0 +1,34 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+<div class="grid">
+    <div class="row">
+        <div class="col">
+            <h2>Chevrolet Corvette</h2>
+
+            <h3>Features</h3>
+
+            <ul>
+                <li>Available as a Coupe or Convertible</li>
+                <li>Innovative Mid-Engine Sports Car</li>
+                <li>6.2L V8 DI Engine with 490-495 HP</li>
+                <li>Standard Safety Features including Side Blind Zone Alert, Rear Park Assist, and Rear Cross Traffic Alert.</li>
+            </ul>
+
+            <h3>Price</h3>
+
+            <p>Est. Coupe (Fully Loaded): $78,935</p>
+            <p>Est. Convertible (Fully Loaded): $87,780</p>
+
+            <p>Note: Dealerships are currently listing Corvettes above MSRP due to high demand and a supply shortage.</p>
+
+            <a href="https://www.chevrolet.com/performance/corvette" target="_blank">[External]: Chevrolet Corvette</a>
+        </div>
+
+        <div class="col">
+            <img src="{{ url_for('static', filename='/images/corvette.png') }}" width="400" alt="Corvette" />
+        </div>
+    </div>
+</div>
+
+{%- endblock content %}

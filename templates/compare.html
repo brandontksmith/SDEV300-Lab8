@@ -1,0 +1,104 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+<div class="grid">
+    <div class="row">
+        <div class="col">
+            <h2>Compare</h2>
+
+            <p>Here's a quick comparison of the body types, engine, horsepower, and 0-60 of the three vehicles.</p>
+
+            <table>
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Coupe</th>
+                    <th>Convertible</th>
+                    <th>Sedan</th>
+                    <th>SUV</th>
+                    <th>Engine</th>
+                    <th>HP</th>
+                    <th>0-60 (in sec)</th>
+                </tr>
+
+                <tr>
+                    <td>X3 M Competition</td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        TwinTurbo V6
+                    </td>
+                    <td>
+                        503
+                    </td>
+                    <td>
+                        3.3
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Corvette</td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        V8
+                    </td>
+                    <td>
+                        490-495
+                    </td>
+                    <td>
+                        2.8
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>C63 S AMG</td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-check-circle"></i>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle"></i>
+                    </td>
+                    <td>
+                        TwinTurbo V8
+                    </td>
+                    <td>
+                        503
+                    </td>
+                    <td>
+                        3.8
+                    </td>
+                </tr>
+            </table>
+
+            <img class="img mt-3" src="{{ url_for('static', filename='/images/corvette2.png') }}" />
+        </div>
+    </div>
+</div>
+
+{%- endblock content %}

@@ -1,0 +1,42 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+<div class="grid">
+    <div class="row">
+        <div class="col pr-2">
+            <h2>Home</h2>
+
+            <p>I have had the chance to experience all three vehicles and I have the X3MC as my daily driver.</p>
+            <p>The C63 S AMG sounds amazing and combines both luxury and performance to deliver the ultimate driving machine.</p>
+            <p>The Corvette, with its mid-engine design, is very unique and comparable to a Ferrari with a much lower price tag. It's beautiful on the outside, but needs some work on the inside.</p>
+            <p>The X3 M Competition is for those who want a sports car, but need a SUV. The vehicle is great, but needs some fine-tuning and quality control as the 2020 X3MC has been a disappointment.</p>
+
+            <h3>My Ranking of the Three Vehicles - Best to Worst</h3>
+
+            <ol>
+                <li>C63 S AMG (Coupe)</li>
+                <li>Corvette</li>
+                <li>X3 M Competition</li>
+            </ol>
+        </div>
+
+        <div class="col">
+            <a href="{{ url_for('x3_m_competition') }}" class="block-img mb-2">
+                <img class="card" src="{{ url_for('static', filename='/images/x3m-1.png') }}" alt="X3 M Competition" />
+                <div class="subtitle">X3 M Competition</div>
+            </a>
+
+            <a href="{{ url_for('corvette') }}" class="block-img mb-2">
+                <img class="card" src="{{ url_for('static', filename='/images/corvette.png') }}" alt="Corvette" />
+                <div class="subtitle">Corvette</div>
+            </a>
+
+            <a href="{{ url_for('c63_s_amg') }}" class="block-img mb-2">
+                <img class="card" src="{{ url_for('static', filename='/images/c63-s-amg.png') }}" alt="C63 S AMG" />
+                <div class="subtitle">C63 S AMG</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{%- endblock content %}

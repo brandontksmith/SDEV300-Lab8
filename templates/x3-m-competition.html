@@ -1,0 +1,34 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+<div class="grid">
+    <div class="row">
+        <div class="col">
+            <h2>BMW X3 M Competition</h2>
+
+            <h3>Features</h3>
+
+            <ul>
+                <li>Powerful Twin Turbo V6 with 503 HP</li>
+                <li>Acceleration, 0-60 mph in 3.3 s</li>
+                <li>21-inch V-spoke bi-color Jet Black Wheels</li>
+                <li>Innovative M xDrive with AWD</li>
+                <li>M Sport Seats with Front & Rear Heated Seats</li>
+                <li>Optional Front Ventilated Seats</li>
+                <li>Active Driving Assistant, which includes Lane Departure Warning, Frontal Collision Warning, City Collision Mitigation</li>
+            </ul>
+
+            <h3>Price</h3>
+
+            <p>The X3 M starts at $69,900, but the fully loaded model with the Competition package is $86,850.</p>
+
+            <a href="https://www.bmwusa.com/vehicles/m-models/x3-m/overview.html" target="_blank">[External]: BMW X3 M</a>
+        </div>
+
+        <div class="col">
+            <img src="{{ url_for('static', filename='/images/x3m-1.png') }}" width="400" alt="X3 M Competition" />
+        </div>
+    </div>
+</div>
+
+{%- endblock content %}

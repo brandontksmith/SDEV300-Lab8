@@ -1,0 +1,32 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+<div class="grid">
+    <div class="row">
+        <div class="col">
+            <h2>Mercedes C63 S AMG</h2>
+
+            <h3>Features</h3>
+
+            <ul>
+                <li>Available as a Sedan or Coupe</li>
+                <li>Acceleration, 0-60 mph in 3.8 s</li>
+                <li>Powerful Twin Turbo V8 with 503 HP</li>
+                <li>AMG Performance Front Seats</li>
+                <li>Active Brake Assist, Attention Assist, Active Distant Assist, and other Safety Features</li>
+            </ul>
+
+            <h3>Price</h3>
+
+            <p>Mercedes has not yet released pricing on the 2021 C63 S AMG. However, a fully loaded C63 S AMG will likely be over $90,000.</p>
+
+            <a href="https://www.mbusa.com/en/vehicles/build/c-class/coupe/c63cs" target="_blank">[External]: Mercedes C63 S AMG</a>
+        </div>
+
+        <div class="col">
+            <img src="{{ url_for('static', filename='/images/c63-s-amg.png') }}" width="400" alt="C63 S AMG" />
+        </div>
+    </div>
+</div>
+
+{%- endblock content %}

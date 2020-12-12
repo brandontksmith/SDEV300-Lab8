@@ -1,0 +1,24 @@
+{% extends "base.html" -%}
+{% block content -%}
+
+{% if error %}
+<div class="error">{{ error }}</div>
+{% endif %}
+
+<h2>Login</h2>
+
+<form action="{{ url_for('login_submit') }}" method="POST">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" />
+    </div>
+
+    <button type="submit">Login</button>
+</form>
+
+{%- endblock content %}
